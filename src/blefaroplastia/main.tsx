@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { createRoot } from 'react-dom/client'
 import { clinic, appointmentHref } from '../clinic'
 import { Brand, Arrow } from '../harmonizacao/landing-sections'
@@ -7,6 +7,7 @@ import { MartelliShimmerLink } from '../components/ui/martelli-shimmer-link'
 import MoltenMetal from '../components/ui/MoltenMetal'
 import '../harmonizacao/page.css'
 import './page.css'
+import { useInstitutionalMotion } from '../hooks/use-institutional-motion'
 
 const appointment = appointmentHref('blefaroplastia na Martelli Care Clinic')
 const blephVideo = 'https://www.instagram.com/drapriscillamartelli/reel/Ddtu6daBEVm/'
@@ -44,6 +45,8 @@ function Booking() {
 }
 
 function App() {
+  const root = useRef<HTMLDivElement>(null)
+  useInstitutionalMotion(root, 'bleph')
   const [showFixed, setShowFixed] = useState(false)
   useEffect(() => {
     const hero = document.querySelector('.bleph-hero')!
@@ -51,7 +54,7 @@ function App() {
     observer.observe(hero)
     return () => observer.disconnect()
   }, [])
-  return <div className="bleph-page"><a className="skip-link" href="#tratamentos">Pular para o conteúdo</a><main>
+  return <div className="bleph-page" ref={root}><a className="skip-link" href="#tratamentos">Pular para o conteúdo</a><main>
     <div className="bleph-opening-stack" id="inicio">
       <section className="bleph-hero" aria-labelledby="hero-title">
         <header className="bleph-site-header"><a className="bleph-site-brand" href="#inicio" aria-label="Martelli Care Clinic, início"><img src="/martelli-monograma.png" alt="" width="52" height="39"/><span><strong>MARTELLI CARE CLINIC</strong><small>Dra. Priscilla Martelli</small></span></a><nav aria-label="Menu principal"><a href="#procedimento">O tratamento</a><a href="#agendar">Agendar</a></nav></header>
