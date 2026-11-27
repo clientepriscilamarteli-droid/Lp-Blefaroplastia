@@ -1,5 +1,5 @@
 /* The LP shares the institutional photography, typography and section palette. */
-.bleph-page { --night:#101010; --chapter:#080808; --surface:#191919; --paper:var(--night); --sand:var(--surface); --ink:#fffaf4; --warm:#f0dfc9; --accent:#f0dfc9; --muted:#c9c9c9; --line:#ffffff2e; background:var(--night); color:var(--ink); overflow-x:clip; }
+.bleph-page { --paper:#f7f3eb; --sand:#ebe0d0; --ink:#241e19; --warm:#6f5945; --accent:#6f5945; --muted:#6f5945; --line:#69534045; background:#10100f; color:#f7f2eb; overflow-x:clip; }
 .bleph-page .wrap { width:min(1190px,calc(100% - 2 * clamp(22px,6vw,108px))); }
 .bleph-page .section-space { padding-block:clamp(72px,11vw,160px); }
 .bleph-page h2 { font:400 clamp(42px,5.8vw,90px)/.96 var(--serif); letter-spacing:-.048em; text-wrap:balance; }
@@ -18,7 +18,7 @@
 .bleph-page .martelli-action { background:#ead7bd; color:#241e19; border-color:#ead7bd; border-radius:0; }
 .bleph-page .martelli-action.secondary { background:transparent; color:inherit; border-color:transparent; border-bottom-color:#d6bda166; }
 .bleph-opening-stack { isolation:isolate; }
-.bleph-hero { --edge:clamp(22px,6vw,108px); position:sticky; top:0; isolation:isolate; min-height:640px; height:100svh; overflow:hidden; background:var(--night); color:var(--ink); }
+.bleph-hero { --edge:clamp(22px,6vw,108px); position:sticky; top:0; isolation:isolate; min-height:640px; height:100svh; overflow:hidden; background:#24211e; color:#fffaf4; }
 .bleph-hero .hero-media,.bleph-hero .hero-frame,.bleph-hero .hero-photo,.bleph-hero .hero-shade { position:absolute; inset:0; }
 .bleph-hero .hero-media { isolation:isolate; overflow:hidden; filter:brightness(.89) saturate(.91); }
 .bleph-hero .hero-frame { visibility:hidden; }
@@ -69,7 +69,7 @@
 .bleph-page .concern-list li { border-color:#d6bda133; }
 .bleph-page .concern-photo img { border-radius:0; }
 .bleph-page .concern-photo > span { border-radius:0; background:#241e19d9; color:#fffaf3; font-size:10px; }
-.bleph-study { background:var(--surface); padding-block:clamp(72px,11vw,150px); }
+.bleph-study { background:#211b17; padding-block:clamp(72px,11vw,150px); }
 .bleph-study-grid { display:grid; grid-template-columns:1fr 1fr; gap:8%; align-items:center; }
 .bleph-study p { max-width:46ch; color:#d7c7b5; }
 .bleph-region-buttons { margin:28px 0; border-top:1px solid #d6bda144; }
@@ -79,7 +79,7 @@
 .bleph-region-buttons button[aria-pressed=true] { color:#fffaf4; }
 .bleph-region-copy { min-height:165px; }
 .bleph-region-copy h3 { font:400 32px var(--serif); margin-bottom:12px; }
-.bleph-eye { background:var(--surface); color:var(--ink); padding:30px 20px; }
+.bleph-eye { background:#e8ded0; color:var(--ink); padding:30px 20px; }
 .bleph-eye svg { display:block; width:100%; }
 .eye-brow,.eye-fold,.eye-crease { fill:none; stroke:#9c836a; stroke-width:3; }
 .eye-brow { stroke-width:12; stroke-linecap:round; }
@@ -111,7 +111,7 @@
 .media-accordion-items [data-open=true] button { color:#fffaf4; }
 .media-accordion-items article > div > p { color:#c9b9a7; }
 .bleph-planning > .bleph-actions { justify-content:flex-end; margin-top:40px; }
-.bleph-social { background:var(--surface); padding-block:clamp(72px,11vw,150px); }
+.bleph-social { background:#211b17; padding-block:clamp(72px,11vw,150px); }
 .bleph-social-grid { display:grid; grid-template-columns:.8fr 1fr; gap:12%; align-items:center; }
 .bleph-social p { color:#d6c4ae; }
 .bleph-social .text-link { display:inline-flex; margin-top:25px; }
@@ -122,11 +122,14 @@
 .bleph-video-caption { position:absolute; z-index:1; bottom:26px; left:25px; right:25px; font-size:12px; color:#fff9e9; }
 .bleph-profile-links { display:grid; gap:10px; margin-top:30px; font-size:10px; color:#cfbca6; }
 .bleph-profile-links a { padding-block:10px; }
-.bleph-page .doctor { position:relative; isolation:isolate; }
-.bleph-page .doctor::before { content:''; position:absolute; z-index:-1; top:0; bottom:0; left:calc((100vw - 100%)/-2); right:calc((100vw - 100%)/-2); background:var(--chapter); }
-.bleph-page .doctor .eyebrow { color:var(--warm); }
+.bleph-page .doctor { position:relative; isolation:isolate; color:#241e19; }
+.bleph-page .doctor::before { content:''; position:absolute; z-index:-1; top:0; bottom:0; left:calc((100vw - 100%)/-2); right:calc((100vw - 100%)/-2); background:#f7f3eb; }
+.bleph-page .doctor h2 em { color:#6f5945; }
+.bleph-page .doctor .eyebrow { color:#6f5945; }
+.bleph-page .doctor .martelli-action { background:#241e19; color:#fffaf4; border-color:#241e19; }
+.bleph-page .doctor .martelli-action.secondary { background:transparent; color:#241e19; border-color:transparent; border-bottom-color:#69534045; }
 .bleph-page .doctor-portrait img { border-radius:0; }
-.bleph-page .bleph-journey { background:var(--night); }
+.bleph-journey { background:#10100f; }
 .bleph-journey .bleph-actions { margin-top:40px; }
 .bleph-clinic { display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:25px; align-items:center; }
 .bleph-clinic > img { width:100%; aspect-ratio:3/4; object-fit:cover; }
@@ -135,13 +138,10 @@
 .bleph-clinic p { color:#c9b9a7; }
 .bleph-page .faq-list details { border-color:#d6bda144; }
 .bleph-page .faq-list details p,.bleph-page .clinical-sources { color:#c9b9a7; }
-.bleph-page .final-cta { background:var(--surface); }
+.bleph-page .final-cta { background:#211b17; }
 .bleph-page .final-cta .eyebrow { color:#d6bda1; }
-.bleph-page .booking-form > input:not([type=checkbox]) { background:var(--night); color:var(--ink); border-color:#777; }
-.bleph-page .booking-form > input::placeholder { color:var(--muted); }
-.bleph-page .footer { color:var(--muted); }
-.bleph-page .footer .brand img { filter:none; }
-.bleph-page .sticky-cta { background:var(--chapter); border-color:var(--line); }
+.bleph-page .footer { color:#e1ceba; }
+.bleph-page .sticky-cta { background:#171311; border-color:#d9b89540; }
 .bleph-page .sticky-cta .martelli-action { width:100%; }
 @media(max-width:1000px) and (min-width:701px) {
  .bleph-planning-heading { grid-template-columns:1fr 1fr; gap:30px; }
@@ -180,21 +180,19 @@
 @media(prefers-reduced-motion:reduce) { .bleph-page *, .bleph-page *::before,.bleph-page *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } .bleph-hero { position:relative; } }
 
 /* A single, quiet opening, centered on the eyelid procedure. */
-.bleph-hero .bleph-static-photo { object-position:50% 36%; }
+.bleph-hero .bleph-static-photo { object-position:50% 24%; transform:scale(1.28); transform-origin:50% 0; }
 .bleph-hero .hero-media { filter:brightness(.88) saturate(.8); }
-.bleph-hero .hero-shade { background:linear-gradient(90deg,#101010f2 0%,#101010a6 38%,#10101012 77%),linear-gradient(180deg,#10101080,transparent 26%,#10101024 65%,#101010ed); }
+.bleph-hero .hero-shade { background:linear-gradient(90deg,#10100fe6 0%,#10100f77 40%,#10100f05 78%),linear-gradient(180deg,#10100f66,transparent 30%,#10100f22 70%,#10100f99); }
 .bleph-static-copy { position:absolute; z-index:1; left:var(--edge); top:50%; transform:translateY(-30%); width:min(80vw,850px); }
 .bleph-static-copy h1 { margin:0; font:400 clamp(60px,8.3vw,130px)/.95 var(--serif); letter-spacing:-.045em; color:#fffaf4; }
 .bleph-static-copy > p { margin-top:25px; font:400 clamp(24px,2.8vw,40px)/1.1 var(--serif); color:#f0dfc9; }
 .bleph-static-copy > p em { font-weight:400; }
 .bleph-static-copy .bleph-actions { margin-top:35px; }
+.bleph-page .final-cta { background:#211b17; }
 .bleph-page .final-cta::before,.bleph-page .final-cta::after { display:none; }
-@media (min-width:761px) and (max-aspect-ratio:4/3) {
- .bleph-hero .bleph-static-photo { mask-image:linear-gradient(#000 48%,transparent 58%); }
-}
 @media(max-width:760px) {
- .bleph-hero .bleph-static-photo { object-position:54% 39%; mask-image:linear-gradient(#000 42%,transparent 57%); }
- .bleph-hero .hero-shade { background:linear-gradient(180deg,#10101088 0%,#10101015 30%,#10101065 48%,#101010ee 67%,#101010 100%); }
+ .bleph-hero .bleph-static-photo { height:110%; object-position:50% 0; transform:none; mask-image:linear-gradient(#000 0%,#000 35%,transparent 53%); }
+ .bleph-hero .hero-shade { background:linear-gradient(180deg,#10100f88 0%,#10100f15 30%,#10100f80 58%,#10100fee 100%); }
  .bleph-static-copy { top:auto; bottom:115px; transform:none; width:calc(100% - 2 * var(--edge)); }
  .bleph-static-copy h1 { font-size:clamp(45px,11.7vw,80px); }
  .bleph-static-copy > p { font-size:28px; margin-top:20px; }
@@ -202,7 +200,7 @@
  .bleph-static-copy .martelli-action { min-height:46px; }
 }
 
-.bleph-process-films { background:var(--surface); }
+.bleph-process-films { background:#211b17; }
 .bleph-gentle-process { display:grid; grid-template-columns:.8fr 1fr; gap:12%; align-items:center; }
 .bleph-gentle-process figure { margin:0; }
 .bleph-gentle-process img { width:100%; height:auto; max-height:620px; object-fit:contain; object-position:left center; }
