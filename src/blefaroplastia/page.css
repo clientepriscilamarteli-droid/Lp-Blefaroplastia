@@ -231,3 +231,105 @@
  .bleph-film figcaption > p { max-width:40ch; }
  .bleph-films-footer { flex-direction:column; gap:18px; }
 }
+
+/* Visual identity: IDENTIDADE-VISUAL-ULTRAFORMER.md.
+   Geometry, content, components and motion stay with the existing LP. */
+.bleph-page {
+  --paper:#f9f7f2; --sand:#eeeee9; --ink:#12120f; --warm:#4a4a46;
+  --accent:#d4d4d8; --muted:#4a4a46; --line:#e0e0dc;
+  --serif:Arial,Helvetica,sans-serif;
+  background:#09090b; color:#fff; font-family:Arial,Helvetica,sans-serif;
+}
+.bleph-page ::selection,.bleph-page .skip-link { background:#ff6317; color:#12120f; }
+.bleph-page h2,.bleph-page .bleph-static-copy h1 { letter-spacing:-.037em; }
+.bleph-page h2 em,.bleph-page .bleph-static-copy > p em {
+  font-family:Georgia,'Times New Roman',serif; font-style:italic; color:inherit;
+}
+.bleph-page .bleph-site-brand strong,.bleph-page .brand > span {
+  font-family:'Cormorant Garamond',Georgia,serif;
+}
+.bleph-page .brand small { font-family:Arial,Helvetica,sans-serif; }
+.bleph-page .bleph-hero { background:#09090b; color:#fff; }
+.bleph-page .bleph-hero .bleph-static-photo {
+  transform:scale(1.06); object-position:50% 24%;
+}
+.bleph-page .bleph-hero .hero-shade {
+  background:linear-gradient(90deg,#09090be6 0%,#09090b77 40%,#09090b05 78%),linear-gradient(180deg,#09090b66,transparent 30%,#09090b22 70%,#09090b99);
+}
+.bleph-page .bleph-site-brand,.bleph-page .bleph-site-header nav { text-shadow:0 1px 12px #09090b73; }
+.bleph-page .bleph-site-brand small,.bleph-page .bleph-static-copy h1 { color:#fff; }
+.bleph-page .bleph-static-copy > p { color:#d4d4d8; }
+.bleph-page .bleph-manifesto { background:#09090b; color:#fff; }
+.bleph-page .bleph-manifesto-copy h2 em { color:#fff; }
+.bleph-page .bleph-manifesto-copy > p { color:#d4d4d8; }
+.bleph-page .concern,.bleph-page .bleph-study,.bleph-page .bleph-planning,
+.bleph-page .bleph-process-films,.bleph-page .faq {
+  color:#12120f; --accent:#12120f; --muted:#4a4a46; --line:#e0e0dc;
+}
+.bleph-page .concern,.bleph-page .bleph-planning,.bleph-page .faq {
+  position:relative; isolation:isolate;
+}
+.bleph-page .concern::before,.bleph-page .bleph-planning::before,.bleph-page .faq::before {
+  content:''; position:absolute; z-index:-1; inset-block:0;
+  left:calc((100vw - 100%)/-2); right:calc((100vw - 100%)/-2); background:#f9f7f2;
+}
+.bleph-page .bleph-study { background:#fff; }
+.bleph-page .bleph-process-films { background:#f9f7f2; }
+.bleph-page .concern-copy p,.bleph-page .bleph-study p,
+.bleph-page .bleph-treatment-list dd,.bleph-page .bleph-gentle-process > div > p,
+.bleph-page .media-accordion-items article > div > p,
+.bleph-page .faq-list details p,.bleph-page .clinical-sources { color:#4a4a46; }
+.bleph-page .concern-list li,.bleph-page .bleph-treatment-list > div,
+.bleph-page .media-accordion-items article,.bleph-page .media-accordion-items article:last-child { border-color:#e0e0dc; }
+.bleph-page .media-accordion-items button,.bleph-page .media-accordion-photo figcaption { color:#4a4a46; }
+.bleph-page .media-accordion-items [data-open=true] button { color:#12120f; }
+.bleph-page .media-accordion-items button > span:nth-child(2),.bleph-page .faq-list summary { font-weight:500; }
+.bleph-page .media-accordion-photo figcaption > span:first-child { border-color:#e0e0dc; }
+.bleph-page .doctor { color:#12120f; }
+.bleph-page .doctor::before { background:#f9f7f2; }
+.bleph-page .doctor h2 em,.bleph-page .doctor .eyebrow { color:#12120f; }
+.bleph-page .doctor-copy p,.bleph-page .credentials li { color:#4a4a46; }
+.bleph-page .credentials,.bleph-page .credentials li { border-color:#e0e0dc; }
+.bleph-page .doctor-portrait figcaption { color:#4a4a46; }
+.bleph-page .bleph-journey { background:#09090b; color:#fff; }
+.bleph-page .bleph-journey h2 em,.bleph-page .step-number { color:#d4d4d8; }
+.bleph-page .treatment-timeline li { border-color:#27272a; }
+.bleph-page .treatment-timeline li::before { background:#d4d4d8; }
+.bleph-page .treatment-timeline p { color:#d4d4d8; }
+.bleph-page .faq-list details { border-color:#d6d6d6; }
+.bleph-page .final-cta { background:#fafafa; color:#12120f; }
+.bleph-page .final-grid h2 em { color:#12120f; }
+.bleph-page .final-grid > div > p,.bleph-page .booking-privacy { color:#4a4a46; }
+.bleph-page .booking-form > input { background:#fff; color:#12120f; border-color:#dedbd4; border-radius:2px; }
+.bleph-page .consent input { accent-color:#12120f; }
+.bleph-page .footer { color:#fff; --muted:#aaaab2; }
+.bleph-page .footer .brand img { filter:none; }
+.bleph-page .sticky-cta { background:#09090b; border-color:#27272a; }
+.bleph-page .martelli-action:not(.secondary),.bleph-page .booking-form .appointment {
+  border-color:transparent; border-radius:2px;
+  background:linear-gradient(180deg,#252525,#080808) padding-box,
+    linear-gradient(132deg,#555,#eee 16%,#888 28%,#242424 46%,#f3f3f3 66%,#555 85%,#d3d3d3) border-box;
+  color:#fff; font-weight:500;
+  box-shadow:inset 0 0 0 1px #ffffff38,0 1px 2px #0003,0 7px 16px #0002;
+  transition:background 220ms cubic-bezier(.22,.61,.36,1),color 220ms cubic-bezier(.22,.61,.36,1),box-shadow 220ms cubic-bezier(.22,.61,.36,1);
+}
+.bleph-page .martelli-action:not(.secondary):hover,.bleph-page .booking-form .appointment:hover {
+  background:linear-gradient(180deg,#343437,#18181b) padding-box,
+    linear-gradient(132deg,#888,#fff 16%,#aaa 28%,#52525b 46%,#fff 66%,#888 85%,#eee) border-box;
+  color:#fff;
+}
+.bleph-page .martelli-action.secondary { color:inherit; border-bottom-color:currentColor; border-radius:2px; }
+.bleph-page .martelli-action.secondary:hover { background:#12120f; color:#fff; }
+.bleph-page .bleph-hero .martelli-action.secondary:hover { background:#fff; color:#12120f; }
+.bleph-page .shimmer-ring { background:linear-gradient(110deg,transparent 20%,#ffffff2b 45%,transparent 70%); }
+.bleph-page a:not(.martelli-action):hover,.bleph-page a:not(.martelli-action):focus-visible { text-decoration:underline; text-underline-offset:4px; }
+.bleph-page :focus-visible { outline:2px solid currentColor; }
+.bleph-page .martelli-action:not(.secondary):focus-visible,.bleph-page .booking-form .appointment:focus-visible { outline-color:#aaaab2; }
+@media(max-width:760px) {
+  .bleph-page .bleph-hero .bleph-static-photo { transform:none; height:100%; }
+  .bleph-page .bleph-hero .hero-shade { background:linear-gradient(180deg,#09090b88 0%,#09090b15 30%,#09090b80 58%,#09090bee 100%); }
+}
+
+@media(min-width:761px) and (max-aspect-ratio:6/5) {
+  .bleph-page .bleph-hero .bleph-static-photo { object-position:50% 8%; }
+}
