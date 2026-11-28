@@ -333,3 +333,7 @@
 @media(min-width:761px) and (max-aspect-ratio:6/5) {
   .bleph-page .bleph-hero .bleph-static-photo { object-position:50% 8%; }
 }
+
+/* A more spacious manifesto, matching the institutional opening rhythm. */
+.bleph-page .bleph-manifesto { min-height:85svh; }
+.bleph-page .bleph-manifesto-copy h2 { font-size:clamp(36px,4.6vw,76px); }
